@@ -1,0 +1,41 @@
+.about-me-section {
+    margin-bottom: 2em;
+    display: grid;
+    grid-gap: 1.2em;
+}
+
+.about-me-img {
+    width: 12em;
+    border-radius: 50%;
+}
+
+@media (min-width: 43.5em){
+    .about-me-section {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-areas: 
+       "img header header header header"
+       "img p p p p";
+       
+       grid-gap: 0.6em;
+       padding: 1.25em 0;
+    }
+    
+    .about-me-img {
+        grid-area: img;
+        margin: auto;
+    }
+    
+    .hero-h {
+        grid-area: header;
+        align-self: end;
+    }
+    
+    .hero-p {
+        grid-area: p;
+    }
+    
+    .about-me-section .hero-p, .about-me-section .hero-h {
+        width: 100%;
+    }
+    
+}
